@@ -3,38 +3,34 @@
   <head>
   <meta charset="utf-8">
   <title>Exercise 1 from W3Resource.com</title>
+  <link rel="stylesheet" href="/Exercise1.css">
   </head>
   <body>
-    <script src="Exercise1.js"> </script>
-    <h1>It is </h1>
-    <p id="output"></p>
-    <script> 
-      var variableName = "This is the variable value"; 
-      document.getElementById("output").innerHTML = today; 
+    <h1>The time and date is:</h1>
+    <h1><p id="today"></p></h1>
+    
+    <div class="center-container">
+    <button id="toggleBtn">Toggle Sidebar</button>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 2</a></li>
+            <li><a href="#">Item 3</a></li>
+            <li><a href="#">Item 4</a></li>
+        </ul>
+    </div>
+
+    <script src="Exercise1.js"></script>
 
 
-var today = new Date();
-var dd = today.getDate();
 
-var mm = today.getMonth()+1; 
-var yyyy = today.getFullYear();
-if(dd<10) 
-{
-    dd='0'+dd;
-} 
+<script> 
+  var today = new Date();
+  var day = today.getDay();
+  document.getElementById("today").innerHTML = today;
 
-if(mm<10) 
-{
-    mm='0'+mm;
-} 
-today = mm+'-'+dd+'-'+yyyy;
-console.log(today);
-today = mm+'/'+dd+'/'+yyyy;
-console.log(today);
-today = dd+'-'+mm+'-'+yyyy;
-console.log(today);
-today = dd+'/'+mm+'/'+yyyy;
-console.log(today);
 </script>
   </body>
   </html>
